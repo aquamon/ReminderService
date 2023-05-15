@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const {PORT} = require('./config/serverConfig');
 
+const {sendBasicEmail} = require('./services/email-service');
 
 const setUpAndStartServer = ()=>{
 
@@ -12,6 +13,9 @@ const setUpAndStartServer = ()=>{
 
     app.listen(PORT , ()=>{
         console.log(`Starting Server on Port : ${PORT}`);
+
+        sendBasicEmail('support@codevamp2.com','redminote4.1947@gmail.com','This is a TEST MAIL','This is a TEST BODY');
+
 
     });
 
