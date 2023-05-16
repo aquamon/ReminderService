@@ -16,7 +16,12 @@ const setUpAndStartServer = ()=>{
     app.listen(PORT , ()=>{
         console.log(`Starting Server on Port : ${PORT}`);
 
-        sendBasicEmail('support@codevamp2.com','redminote4.1947@gmail.com','This is a TEST MAIL','This is a TEST BODY');
+        // sendBasicEmail(
+        //     'support@codevamp2.com',
+        //     'redminote4.1947@gmail.com',
+        //     'This is a TEST MAIL',
+        //     'This is a TEST BODY'
+        //     );
 
         cron.schedule('*/1 * * * *',()=>{
             console.log('runnign a task every 2 mins');
