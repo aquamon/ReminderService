@@ -50,11 +50,16 @@ const createNotification = async (data) => {
     }
 }
 
+const testingQueue = async(data) => {
+    console.log("Inside Service Layer", data);
+}
+
 
 
 module.exports = {
     sendBasicEmail,
     fetchPendingEmails,
     createNotification,
-    updateTicket
+    updateTicket,
+    testingQueue
 }
